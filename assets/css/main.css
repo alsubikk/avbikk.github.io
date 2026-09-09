@@ -321,6 +321,81 @@ a:hover {
 }
 
 
+
+/* ===== Список статей (главная + блог) ===== */
+.article-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.article-item {
+    margin: 0 0 28px 0;
+    padding: 16px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.article-item:last-child {
+    border-bottom: none;
+}
+
+.article-item > article {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+}
+
+.article-title {
+    font: 22px Roboto, sans-serif;
+    font-weight: 600;
+    margin: 0 16px 0 0;
+    color: #184d47;
+    order: 1;
+}
+
+.article-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.article-title a:hover {
+    color: #feb386;
+}
+
+.article-excerpt {
+    flex: 1 1 100%;
+    font: 16px Roboto, Monospace;
+    color: #31112c;
+    margin: 8px 0 0;
+    order: 3;
+}
+
+.article-more-link {
+    color: #810000;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: 4px;
+    text-decoration: none;
+}
+
+.article-more-link:hover {
+    color: #feb386;
+}
+
+.article-date {
+    font: 14px Roboto, sans-serif;
+    color: #6b6b6b;
+    margin: 0;
+    order: 2;
+}
+
+
+/* ===== Контейнер контента ===== */
+.content-container {
+    margin: 20px 0;
+}
+
+
 /* ===== Устаревшие алиасы (для обратной совместимости) ===== */
 .colortext { color: #810000; }
 blink { color: #31112c; font: 20px Roboto, Monospace; }
