@@ -114,18 +114,58 @@ body {
 
 
 /* ===== Ссылки ===== */
-.link,
-a:link {
-    color: green;
+/* Базовый стиль (если не указан другой) */
+a {
+    color: #810000;
     text-decoration: underline;
+    transition: color .2s;
 }
 
-.link-visited,
 a:visited {
-    color: darkgreen;
+    color: #6b1010;
+}
+
+a:hover {
+    color: #feb386;
+}
+
+/* Вариант 1 — основная ссылка (тёмно-красная) */
+.link {
+    color: #810000;
+    text-decoration: underline;
+    transition: color .2s;
+}
+
+.link:visited {
+    color: #6b1010;
 }
 
 .link:hover {
+    color: #feb386;
+}
+
+/* Вариант 2 — акцентная ссылка (зелёная) */
+.link-accent {
+    color: #2d7a2d;
+    text-decoration: underline;
+    transition: color .2s;
+}
+
+.link-accent:visited {
+    color: #1f5a1f;
+}
+
+.link-accent:hover {
+    color: #feb386;
+}
+
+/* Ссылка без подчёркивания (для меню и кнопок) */
+.link-plain {
+    color: inherit;
+    text-decoration: none;
+}
+
+.link-plain:hover {
     color: #feb386;
 }
 
