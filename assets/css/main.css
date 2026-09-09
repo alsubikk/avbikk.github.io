@@ -1,41 +1,19 @@
-/* Alsu LABS — общие стили для всех страниц */
+/* ===================================================================
+ * Alsu LABS — дизайн-система
+ * Единые стили для всех страниц сайта.
+ * Подключается через {% include head.html %} в каждой странице.
+ * =================================================================== */
 
-.colortext {
-    color: #810000;
-}
 
-P {
-    text-align: justify;
-}
-
-h1 {
-    color: #184d47;
-    font: 35px Roboto, sans-serif;
-}
-
-h2 {
-    color: #810000;
-    font: 32px Roboto, sans-serif;
-}
-
-h3 {
-    color: #810000;
-    font: 28px Roboto, sans-serif;
-}
-
-h4 {
-    color: #31112c;
-    font: 20px Roboto, Monospace;
-}
-
-blink {
-    color: #31112c;
-    font: 20px Roboto, Monospace;
+/* ===== Базовый сброс ===== */
+* {
+    box-sizing: border-box;
 }
 
 body {
     background: #f6f6f6;
     font: 18px Roboto, Monospace;
+    color: #31112c;
     margin: 0 14% 60px;
     line-height: 1.55;
 }
@@ -48,16 +26,113 @@ body {
     body { margin: 0 4% 60px; font-size: 16px; }
 }
 
-a:link {
-    color: green;
+
+/* ===== Типографика ===== */
+
+/* Title — главный заголовок страницы */
+.title {
+    color: #184d47;
+    font: 35px Roboto, sans-serif;
+    margin: 0 0 16px;
+    line-height: 1.2;
 }
 
+@media (max-width: 600px) {
+    .title { font-size: 28px; }
+}
+
+/* Heading 1 — крупный секционный заголовок */
+.heading-1 {
+    color: #184d47;
+    font: 35px Roboto, sans-serif;
+    margin: 32px 0 16px;
+    line-height: 1.2;
+}
+
+/* Heading 2 — заголовок секции */
+.heading-2 {
+    color: #810000;
+    font: 32px Roboto, sans-serif;
+    margin: 28px 0 12px;
+    line-height: 1.2;
+}
+
+/* Heading 3 — подсекция */
+.heading-3 {
+    color: #810000;
+    font: 28px Roboto, sans-serif;
+    margin: 24px 0 10px;
+    line-height: 1.3;
+}
+
+/* Subtitle — подзаголовок или акцентный текст */
+.subtitle {
+    color: #31112c;
+    font: 22px Roboto, sans-serif;
+    font-style: italic;
+    margin: 8px 0 16px;
+}
+
+/* Heading 4 — мелкий заголовок (для акцентов, легенд) */
+.heading-4 {
+    color: #31112c;
+    font: 20px Roboto, Monospace;
+    margin: 16px 0 8px;
+}
+
+/* Body text — обычный текст абзаца */
+.body-text {
+    text-align: justify;
+    font: 18px Roboto, Monospace;
+    margin: 12px 0;
+    color: #31112c;
+}
+
+/* Lead text — крупный вступительный абзац */
+.lead {
+    font: 22px Roboto, sans-serif;
+    margin: 16px 0;
+    color: #31112c;
+}
+
+/* Caption — мелкий текст-подпись */
+.caption {
+    font: 14px Roboto, sans-serif;
+    color: #6b6b6b;
+    margin: 8px 0;
+}
+
+
+/* ===== Акценты ===== */
+.accent {
+    color: #810000;
+}
+
+.muted {
+    color: #6b6b6b;
+}
+
+
+/* ===== Ссылки ===== */
+.link,
+a:link {
+    color: green;
+    text-decoration: underline;
+}
+
+.link-visited,
 a:visited {
     color: darkgreen;
 }
 
-/* Меню */
+.link:hover {
+    color: #feb386;
+}
+
+
+/* ===== Меню навигации ===== */
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
 .menu-main {
     list-style: none;
     margin: 0;
@@ -88,9 +163,10 @@ a:visited {
     text-transform: uppercase;
     display: inline-block;
     transition: color .2s;
+    color: #9d999d;
 }
 
-.menu-main a, .menu-main a:visited { color: #9d999d; }
+.menu-main a:visited { color: #9d999d; }
 .menu-main a.current, .menu-main a:hover { color: #feb386; }
 
 .menu-main a:before,
@@ -106,8 +182,10 @@ a:visited {
     transition: .8s;
 }
 
-.menu-main a:hover:before, .menu-main .current:before { left: 0; }
-.menu-main a:hover:after, .menu-main .current:after { right: 0; }
+.menu-main a:hover:before,
+.menu-main a.current:before { left: 0; }
+.menu-main a:hover:after,
+.menu-main a.current:after { right: 0; }
 
 @media (max-width: 900px) {
     .menu-main a { margin: 0 12px; font-size: 14px; }
@@ -118,3 +196,91 @@ a:visited {
     .menu-main li:after { content: ""; }
     .menu-main a { display: block; padding: 8px 0; margin: 0; }
 }
+
+
+/* ===== Кнопки и CTA ===== */
+.button {
+    display: inline-block;
+    background: #feb386;
+    color: #31112c;
+    padding: 14px 28px;
+    margin: 18px 0;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border-radius: 3px;
+    border-bottom: 3px solid #e89c6a;
+    transition: all .15s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #fec7a0;
+    transform: translateY(-1px);
+}
+
+.button-secondary {
+    background: white;
+    color: #810000;
+    border: 2px solid #810000;
+    border-bottom: 2px solid #810000;
+}
+
+.button-secondary:hover {
+    background: #fff7ec;
+}
+
+
+/* ===== Карточки и секции ===== */
+.card {
+    background: white;
+    padding: 24px;
+    border-radius: 4px;
+    border-left: 6px solid #feb386;
+    margin: 20px 0;
+}
+
+.section {
+    margin: 40px 0;
+}
+
+.section-tight {
+    margin: 24px 0;
+}
+
+
+/* ===== Списки ===== */
+.list-checks {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list-checks li {
+    padding-left: 28px;
+    position: relative;
+    margin: 10px 0;
+}
+
+.list-checks li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #810000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/* ===== Разделитель ===== */
+.divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 36px 0;
+}
+
+
+/* ===== Устаревшие алиасы (для обратной совместимости) ===== */
+.colortext { color: #810000; }
+blink { color: #31112c; font: 20px Roboto, Monospace; }
