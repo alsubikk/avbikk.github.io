@@ -1,42 +1,31 @@
+---
+title: Alsu Labs
+---
 <!doctype html>
-<html>
+<html lang="ru">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Alsu Labs — Alsu LABS</title>
 
-        {% include head.html %}<div class="header-bar">
-            <div class="site-id">
-                <h1><span class="active">Alsu LABS</span></h1>
-                <h4>Блог о мобильной разработке, книгах и размышления о жизни.</h4>
-            </div>
-            <ul class="menu-main">
-                <li><a href="https://alsubikk.com/development.html" class="site">Разработка </a></li>
-                <li><a href="https://alsubikk.com/books.html" class="site">Книги</a></li>
-                <li><a href="https://alsubikk.com/experience.html" class="site">Опыт</a></li>
-            </ul>
-        </div>
-        
-        <title>Alsu Labs</title>
+        {% include head.html %}
     </head>
-    
     <body>
+        {% include header.html %}
+
         <main class="content-container">
-  <article>
-    <header>
-      <h1>Суть моей научной работы</h1>
-    </header>
-
-    <footer>
-      <div class="metadata">
-          <p class="author">
-            By Alsu Bikkulova / Октябрь 20, 2020
+            <article>
+                <header>
+                    <h1 class="title">Alsu Labs</h1>
+                </header>
+                <footer>
+                    <p class="caption">By Alsu Bikkulova / Октябрь 20, 2020
           </p>
-      </div>
-    </footer>
+                </footer>
 
-    <div class="article-content">
+                <div class="article-content">
+
         Тема моей научной работы звучит так: 
         <br>
         Первопринципное изучение электронных, упругих и кинетических свойств двумерных кристаллов перспективных для опто- и наноэлектроники.
@@ -53,10 +42,9 @@
         <br>
         Считать можно и локально на своем компьютере, но долго. Если тоже хотите попробовать - ищите, где уже стоит VASP, либо ставьте локально (но он платный и дорогой.). 
         <a href="https://www.vasp.at/wiki/index.php/Atoms_and_Molecules_-_Tutorial" target="_blank">А это инструкция для первых шагов.</a> 
-    </div>
-    </article>
-</main>
-
-
+    
+                </div>
+            </article>
+        </main>
     </body>
 </html>
