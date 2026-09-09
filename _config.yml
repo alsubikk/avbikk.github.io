@@ -1,0 +1,8 @@
+title: Alsu LABS
+description: Блог о мобильной разработке, книгах и размышления о жизни.
+url: "https://alsubikk.com"
+baseurl: ""
+markdown: kramdown
+
+include:
+  - _includes
