@@ -2,7 +2,7 @@
 .menu-main {
     list-style: none;
     margin: 0;
-    padding: 25px 0 5px;
+    padding: 16px 0 6px;
     text-align: center;
     background: white;
 }
@@ -68,13 +68,14 @@ header-bar {
     align-items: center;
     flex-wrap: wrap;
     padding: 0 8px;
+    margin-bottom: 8px;
 }
 
 header-bar > .menu-main {
     flex: 1 1 auto;
     text-align: left;
     background: transparent;
-    padding: 25px 0 5px;
+    padding: 16px 0 6px;
     margin: 0;
 }
 
