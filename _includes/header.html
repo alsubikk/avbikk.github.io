@@ -1,19 +1,28 @@
 <header-bar>
   <ul class="menu-main">
-    <li><a href="https://alsubikk.com/blog.html" class="site">Блог</a></li>
-    <li><a href="https://alsubikk.com/podcast.html" class="site">Подкасты</a></li>
-    <li><a href="https://alsubikk.com/book.html" class="site">Между наймом и бизнесом</a></li>
-    <li><a href="https://alsubikk.com/about.html" class="site">Обо мне</a></li>
+    {% if page.lang == 'en' %}
+      <li><a href="https://alsubikk.com/blog-en.html" class="site">Blog</a></li>
+      <li><a href="https://alsubikk.com/podcast.html" class="site">Podcasts</a></li>
+      <li><a href="https://alsubikk.com/book.html" class="site">Between Employment and Business</a></li>
+      <li><a href="https://alsubikk.com/about.html" class="site">About me</a></li>
+    {% else %}
+      <li><a href="https://alsubikk.com/blog.html" class="site">Блог</a></li>
+      <li><a href="https://alsubikk.com/podcast.html" class="site">Подкасты</a></li>
+      <li><a href="https://alsubikk.com/book.html" class="site">Между наймом и бизнесом</a></li>
+      <li><a href="https://alsubikk.com/about.html" class="site">Обо мне</a></li>
+    {% endif %}
   </ul>
+  {% if page.en_translation %}
   <div class="lang-switcher">
     {% if page.lang == 'en' %}
-      <a href="https://alsubikk.com/blog.html" class="lang-link">RU</a>
+      <a href="{{ page.en_translation }}" class="lang-link">RU</a>
       <span class="lang-sep">|</span>
       <span class="lang-active">EN</span>
     {% else %}
       <span class="lang-active">RU</span>
       <span class="lang-sep">|</span>
-      <a href="https://alsubikk.com/blog-en.html" class="lang-link">EN</a>
+      <a href="{{ page.en_translation }}" class="lang-link">EN</a>
     {% endif %}
   </div>
+  {% endif %}
 </header-bar>
