@@ -14,16 +14,16 @@ body {
     background: #f6f6f6;
     font: 18px Roboto, Monospace;
     color: #31112c;
-    margin: 0 14% 60px;
+    margin: 0 14% 120px;
     line-height: 1.55;
 }
 
 @media (max-width: 900px) {
-    body { margin: 0 6% 60px; font-size: 17px; }
+    body { margin: 0 6% 120px; font-size: 17px; }
 }
 
 @media (max-width: 600px) {
-    body { margin: 0 4% 60px; font-size: 16px; }
+    body { margin: 0 4% 120px; font-size: 16px; }
 }
 
 
