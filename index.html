@@ -33,17 +33,17 @@ en_translation: /index-en.html
             <!-- КНИГА -->
             <section class="section">
                 <h2 class="heading-2">📖 Книга в работе</h2>
+                {% assign book = site.data.articles | where: 'slug', 'book' | first %}
                 <div class="card">
-                    <h3 class="heading-3">Между наймом и бизнесом</h3>
+                    <h3 class="heading-3">{{ book.title_ru }}</h3>
                     <p class="lead">
-                        Книга о том, как перейти к своему делу, не разрушив жизнь по дороге.
-                        Сейчас в открытой разработке — ищу ранних читателей, инвесторов и партнёров.
+                        {{ book.excerpt_ru }}
                     </p>
                     <p class="body-text">
                         Пре-ланч намечен на конец 2027 года. Пока книга проходит открытую проверку на читателях.
                     </p>
                     <p>
-                        <a class="button" href="/book.html">Узнать больше о книге →</a>
+                        <a class="button" href="{{ book.url }}">Узнать больше о книге →</a>
                     </p>
                 </div>
             </section>
@@ -53,55 +53,10 @@ en_translation: /index-en.html
                 <h2 class="heading-2">📝 Блог</h2>
                 <p class="lead">Заметки про iOS-разработку, книги и карьеру.</p>
                 <ol class="article-list">
-
-                    <li class="article-item">
-                        <h3 class="article-title">
-                            <a href="/2022/books/01_no_rules_rules.html">No Rules Rules: О культуре Netflix</a>
-                        </h3>
-                        <p class="article-excerpt">
-                            Книга Рида Хастингса и Эрин Мейер о культуре Netflix:
-                            свобода и ответственность как рабочие принципы.
-                            <a class="article-more-link" href="/2022/books/01_no_rules_rules.html">Читать →</a>
-                        </p>
-                        <p class="article-date">22 марта 2022</p>
-                    </li>
-
-                    <li class="article-item">
-                        <h3 class="article-title">
-                            <a href="/2020/development/book_advanced_swift.html">Про книгу Advanced Swift</a>
-                        </h3>
-                        <p class="article-excerpt">
-                            Для кого книга, что интересного в главах про enums, strings, collections.
-                            Заметки для начинающих iOS-разработчиков.
-                            <a class="article-more-link" href="/2020/development/book_advanced_swift.html">Читать →</a>
-                        </p>
-                        <p class="article-date">22 октября 2020</p>
-                    </li>
-
-                    <li class="article-item">
-                        <h3 class="article-title">
-                            <a href="/2020/development/how_to_become_a_programmer.html">Как перейти в iOS-разработчики</a>
-                        </h3>
-                        <p class="article-excerpt">
-                            Подробная инструкция с ссылками на курсы для тех, кто хочет начать карьеру
-                            в iOS-разработке.
-                            <a class="article-more-link" href="/2020/development/how_to_become_a_programmer.html">Читать →</a>
-                        </p>
-                        <p class="article-date">10 октября 2020</p>
-                    </li>
-
-                    <li class="article-item">
-                        <h3 class="article-title">
-                            <a href="/2022/experience/01_labor.html">Как я стала мамой</a>
-                        </h3>
-                        <p class="article-excerpt">
-                            17 февраля 2022 года я стала мамой. Рассказ про беременность, роды и
-                            первые недели с ребёнком — что оказалось не так, как я ожидала.
-                            <a class="article-more-link" href="/2022/experience/01_labor.html">Читать →</a>
-                        </p>
-                        <p class="article-date">Март 2022</p>
-                    </li>
-
+                    {%- assign posts = site.data.articles | where_exp: 'item', "item.category != 'book'" | sort: 'sort_order' -%}
+                    {%- for article in posts limit:4 -%}
+                        {% include article-card.html article=article %}
+                    {%- endfor -%}
                 </ol>
                 <p>
                     <a class="button" href="/blog.html">Все статьи и страницы →</a>
