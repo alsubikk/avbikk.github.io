@@ -4,11 +4,11 @@
   year: '2026'
   sort_order: 0
   title_ru: 'Когда у меня появился первый айфон? Спойлер: не сразу'
-  title_en:
+  title_en: null
   excerpt_ru: История про то, как я полгода работала iOS-разработчицей без айфона, и что думаю про новый складной iPhone от Apple.
-  excerpt_en:
+  excerpt_en: null
   date_ru: 10 сентября 2026
-  date_en:
+  date_en: null
 - slug: book
   url: /book.html
   category: book
@@ -21,8 +21,6 @@
     opportunities.'
   date_ru: Пре-ланч · конец 2027
   date_en: Pre-launch · end of 2027
-  cta_ru: Перейти на страницу книги →
-  cta_en: Open the book page →
 - slug: no-rules-rules-2022
   url: /2022/books/01_no_rules_rules.html
   category: books
@@ -61,7 +59,7 @@
   category: development
   year: '2020'
   sort_order: 5
-  title_ru: Как перейти в iOS-разработчики?
+  title_ru: 'Как перейти в iOS-разработчики?'
   title_en: How to Become an iOS Developer
   excerpt_ru: Подробная инструкция с ссылками на курсы для тех, кто хочет начать карьеру в iOS-разработке.
   excerpt_en: A detailed guide with course links for those who want to start a career in iOS development.
@@ -72,8 +70,8 @@
   category: books
   year: '2020'
   sort_order: 6
-  title_ru: No Rules Rules (2020 версия)
-  title_en: No Rules Rules (2020 version)
+  title_ru: 'No Rules Rules (2020 версия)'
+  title_en: 'No Rules Rules (2020 version)'
   excerpt_ru: 'Заметки о книге Netflix: свобода, ответственность, плотность талантов — что применимо в реальной работе.'
   excerpt_en: 'Notes about the Netflix book: freedom, responsibility, talent density — what''s applicable in real work.'
   date_ru: 8 октября 2020
