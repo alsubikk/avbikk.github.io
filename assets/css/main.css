@@ -238,6 +238,51 @@ a:hover {
 }
 
 
+/* ===== Переключатель языка (RU / EN) ===== */
+header-bar {
+    position: relative;
+}
+
+.lang-switcher {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.lang-switcher .lang-active {
+    color: #184d47;
+    font-weight: bold;
+}
+
+.lang-switcher .lang-link {
+    color: #9d999d;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.lang-switcher .lang-link:hover {
+    color: #feb386;
+}
+
+.lang-switcher .lang-sep {
+    color: #606060;
+    margin: 0 8px;
+}
+
+@media (max-width: 600px) {
+    .lang-switcher {
+        position: static;
+        text-align: center;
+        padding: 8px 0;
+        background: #f6f6f6;
+    }
+}
+
+
 /* ===== Кнопки и CTA ===== */
 .button {
     display: inline-block;
@@ -313,15 +358,6 @@ a:hover {
 }
 
 
-/* ===== Разделитель ===== */
-.divider {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 36px 0;
-}
-
-
-
 /* ===== Список статей (главная + блог) ===== */
 .article-list {
     list-style: none;
@@ -393,6 +429,14 @@ a:hover {
 /* ===== Контейнер контента ===== */
 .content-container {
     margin: 20px 0;
+}
+
+
+/* ===== Разделитель ===== */
+.divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 36px 0;
 }
 
 
