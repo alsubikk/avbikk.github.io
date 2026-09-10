@@ -1,0 +1,40 @@
+{%- comment -%}
+  article-card.html — единая карточка статьи.
+  Использование: {% include article-card.html article=some_article %}
+  Требует front matter: title_ru, title_en, excerpt_ru, excerpt_en, url, date_ru, date_en.
+  Опционально: cta_ru, cta_en (для переопределения текста ссылки).
+{%- endcomment -%}
+<li class="article-item">
+  <h3 class="article-title">
+    <a href="{{ include.article.url }}">
+      {%- if page.lang == 'en' -%}
+        {{ include.article.title_en }}
+      {%- else -%}
+        {{ include.article.title_ru }}
+      {%- endif -%}
+    </a>
+  </h3>
+  <p class="article-excerpt">
+    {%- if page.lang == 'en' -%}
+      {{ include.article.excerpt_en }}
+    {%- else -%}
+      {{ include.article.excerpt_ru }}
+    {%- endif -%}
+    <a class="article-more-link" href="{{ include.article.url }}">
+      {%- if page.lang == 'en' -%}
+        {%- if include.article.cta_en -%}{{ include.article.cta_en }}{%- else -%}Read →{%- endif -%}
+      {%- else -%}
+        {%- if include.article.cta_ru -%}{{ include.article.cta_ru }}{%- else -%}Читать →{%- endif -%}
+      {%- endif -%}
+    </a>
+  </p>
+  {%- if include.article.date_ru or include.article.date_en -%}
+    <p class="article-date">
+      {%- if page.lang == 'en' -%}
+        {{ include.article.date_en }}
+      {%- else -%}
+        {{ include.article.date_ru }}
+      {%- endif -%}
+    </p>
+  {%- endif -%}
+</li>
