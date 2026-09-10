@@ -5,4 +5,15 @@
     <li><a href="https://alsubikk.com/book.html" class="site">Между наймом и бизнесом</a></li>
     <li><a href="https://alsubikk.com/about.html" class="site">Обо мне</a></li>
   </ul>
+  <div class="lang-switcher">
+    {% if page.lang == 'en' %}
+      <a href="https://alsubikk.com/blog.html" class="lang-link">RU</a>
+      <span class="lang-sep">|</span>
+      <span class="lang-active">EN</span>
+    {% else %}
+      <span class="lang-active">RU</span>
+      <span class="lang-sep">|</span>
+      <a href="https://alsubikk.com/blog-en.html" class="lang-link">EN</a>
+    {% endif %}
+  </div>
 </header-bar>
