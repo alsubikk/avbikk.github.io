@@ -61,7 +61,7 @@
   category: development
   year: '2020'
   sort_order: 5
-  title_ru: 'Как перейти в iOS-разработчики?'
+  title_ru: Как перейти в iOS-разработчики?
   title_en: How to Become an iOS Developer
   excerpt_ru: Подробная инструкция с ссылками на курсы для тех, кто хочет начать карьеру в iOS-разработке.
   excerpt_en: A detailed guide with course links for those who want to start a career in iOS development.
@@ -72,8 +72,8 @@
   category: books
   year: '2020'
   sort_order: 6
-  title_ru: 'No Rules Rules (2020 версия)'
-  title_en: 'No Rules Rules (2020 version)'
+  title_ru: No Rules Rules (2020 версия)
+  title_en: No Rules Rules (2020 version)
   excerpt_ru: 'Заметки о книге Netflix: свобода, ответственность, плотность талантов — что применимо в реальной работе.'
   excerpt_en: 'Notes about the Netflix book: freedom, responsibility, talent density — what''s applicable in real work.'
   date_ru: 8 октября 2020
