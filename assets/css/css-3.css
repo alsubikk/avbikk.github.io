@@ -1,0 +1,123 @@
+/* ===== Меню (включая RU/EN переключатель справа) ===== */
+.menu-main {
+    list-style: none;
+    margin: 0;
+    padding: 25px 0 5px;
+    text-align: center;
+    background: white;
+}
+
+.menu-main li { display: inline-block; }
+
+.menu-main li:after {
+    content: "|";
+    color: #606060;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menu-main li:last-child:after { content: none; }
+
+.menu-main a {
+    text-decoration: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 18px;
+    color: #31112c;
+    transition: color .2s;
+}
+
+.menu-main a:visited { color: #9d999d; }
+.menu-main a.current, .menu-main a:hover { color: #feb386; }
+
+.menu-main a:before,
+.menu-main a:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: auto;
+    right: 50%;
+    bottom: 0;
+    left: 50%;
+    background: #feb386;
+    transition: all .3s;
+}
+
+.menu-main a:hover:before,
+.menu-main a.current:before { left: 0; }
+.menu-main a:hover:after,
+.menu-main a.current:after { right: 0; }
+
+@media (max-width: 900px) {
+    .menu-main a { margin: 0 12px; font-size: 14px; }
+}
+
+@media (max-width: 600px) {
+    .menu-main li { display: block; }
+    .menu-main li:after { content: ""; }
+    .menu-main a { display: block; padding: 8px 0; margin: 0; }
+}
+
+
+/* ===== Переключатель языка (RU / EN) ===== */
+header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 8px;
+}
+
+header-bar > .menu-main {
+    flex: 1 1 auto;
+    text-align: left;
+    background: transparent;
+    padding: 25px 0 5px;
+    margin: 0;
+}
+
+.lang-switcher {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 12px 4px;
+    flex: 0 0 auto;
+}
+
+.lang-switcher .lang-active {
+    color: #184d47;
+    font-weight: bold;
+}
+
+.lang-switcher .lang-link {
+    color: #9d999d;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.lang-switcher .lang-link:hover {
+    color: #feb386;
+}
+
+.lang-switcher .lang-sep {
+    color: #606060;
+    margin: 0 8px;
+}
+
+@media (max-width: 600px) {
+    header-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    header-bar > .menu-main {
+        text-align: center;
+    }
+    .lang-switcher {
+        text-align: center;
+        padding: 8px 0;
+        background: #f6f6f6;
+    }
+}

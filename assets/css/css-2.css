@@ -1,0 +1,129 @@
+/* ===== Карточки ===== */
+.card {
+    background: #fff;
+    padding: 24px 28px;
+    border-left: 4px solid #810000;
+    border-radius: 4px;
+    margin: 24px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.card > *:last-child {
+    margin-bottom: 0;
+}
+
+.card .heading-3 {
+    margin-top: 0;
+}
+
+/* ===== Секции ===== */
+.section {
+    margin: 40px 0;
+}
+
+.section + .section {
+    padding-top: 24px;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* ===== Списки ===== */
+ul, ol {
+    margin: 12px 0;
+    padding-left: 28px;
+    color: #31112c;
+}
+
+/* ===== Список статей (article-list) ===== */
+.article-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 16px 0 24px;
+}
+
+.article-item {
+    margin: 16px 0;
+    padding: 16px 20px;
+    background: #fff;
+    border-radius: 4px;
+    border-left: 3px solid #810000;
+    transition: transform .15s;
+}
+.article-item:hover { transform: translateX(4px); }
+
+.article-title {
+    margin: 0 0 6px;
+    font: 22px Roboto, sans-serif;
+}
+.article-title a { color: #184d47; text-decoration: none; }
+.article-title a:hover { color: #0f3a35; text-decoration: underline; }
+
+.article-excerpt {
+    color: #31112c;
+    margin: 6px 0;
+    font: 16px Roboto, sans-serif;
+    line-height: 1.5;
+}
+
+.article-more-link {
+    color: #810000;
+    text-decoration: none;
+    margin-left: 4px;
+    font-weight: 500;
+}
+.article-more-link:hover { text-decoration: underline; }
+
+.article-date {
+    color: #606060;
+    font: 13px Roboto, sans-serif;
+    margin: 4px 0 0;
+}
+
+/* ===== Форма подписки ===== */
+.signup {
+    background: #fff;
+    padding: 24px;
+    border-radius: 4px;
+    margin: 20px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+.signup label {
+    display: block;
+    font: 14px Roboto, sans-serif;
+    margin-bottom: 6px;
+    color: #606060;
+}
+.signup input[type="email"] {
+    width: 100%;
+    max-width: 360px;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font: 16px Roboto, sans-serif;
+    margin-bottom: 12px;
+}
+.signup button {
+    background: #184d47;
+    color: #fff;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 4px;
+    font: 16px Roboto, sans-serif;
+    cursor: pointer;
+    transition: background .2s;
+}
+.signup button:hover { background: #0f3a35; }
+.signup .disclaimer {
+    font: 13px Roboto, sans-serif;
+    color: #606060;
+    margin: 8px 0 0;
+}
+
+/* ===== HR divider ===== */
+.divider {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 48px 0 32px;
+}
+
+/* ===== Muted (серый) ===== */
+.muted { color: #606060; }
