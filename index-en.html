@@ -54,7 +54,7 @@ en_translation: /index.html
                 <h2 class="heading-2">📝 Blog</h2>
                 <p class="lead">Notes on iOS development, books, and careers.</p>
                 <ol class="article-list">
-                    {%- assign posts = site.data.articles | where_exp: 'item', "item.category != 'book' and item.title_en != ''" | sort: 'sort_order' -%}
+                    {%- assign posts = site.data.articles | where_exp: 'item', "item.category != 'book'" | where_exp: 'item', "item.title_en" | sort: 'sort_order' -%}
                     {%- for article in posts limit:4 -%}
                         {% include article-card.html article=article %}
                     {%- endfor -%}
