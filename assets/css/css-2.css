@@ -18,12 +18,11 @@
 
 /* ===== Секции ===== */
 .section {
-    margin: 40px 0;
+    margin: 28px 0;
 }
 
 .section + .section {
-    padding-top: 24px;
-    border-top: 1px solid #e0e0e0;
+    padding-top: 0;
 }
 
 /* ===== Списки ===== */
