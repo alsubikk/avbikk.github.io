@@ -1,0 +1,8 @@
+/* Card tightening — fix for .card bottom margin and heading-3 inside cards */
+.card > *:last-child {
+    margin-bottom: 0;
+}
+
+.card .heading-3 {
+    margin-top: 0;
+}
