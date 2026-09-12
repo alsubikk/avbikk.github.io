@@ -69,7 +69,6 @@ header-bar {
     flex-wrap: wrap;
     padding: 16px 8px 6px;
     margin-bottom: 32px;
-    background: #fff;
 }
 
 header-bar > .menu-main {
@@ -113,19 +112,15 @@ header-bar > .menu-main {
     header-bar {
         flex-direction: column;
         align-items: stretch;
-        padding: 12px 8px;
-        margin-bottom: 20px;
+        padding: 12px 8px 4px;
+        margin-bottom: 24px;
     }
     header-bar > .menu-main {
         text-align: center;
     }
-    .menu-main {
-        background: transparent;
-    }
     .lang-switcher {
         text-align: center;
-        padding: 8px 0;
-        background: #f6f6f6;
+        padding: 12px 0 4px;
         margin-top: 8px;
     }
 }
